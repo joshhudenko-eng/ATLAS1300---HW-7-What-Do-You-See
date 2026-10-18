@@ -2,5 +2,5 @@ function drawTrunk(){
     drop = 100;
     strokeWeight(7);
     stroke("green");
-    line(200, 200, 300, 300);
+    line(width/2, height, width/2, height - drop);
 }
