@@ -4,7 +4,7 @@ function drawTree(branchling){
     stroke(random(90, 130), 73, 0);
     line(0, 0, 0, -branchling);
 
-    if (branchling > 40){
+    if (branchling > 20){
         push();
         translate(0, -branchling);
         rotate(random(20, 40));
@@ -13,11 +13,10 @@ function drawTree(branchling){
 
         push();
         translate(0, -branchling);
-        rotate(random(-40, -20));
+        rotate(random(-20, -40));
         drawTree(branchling * random(0.6, 0.75));
         pop();
     } else {
         drawLeafCluster();
     }
-
 }

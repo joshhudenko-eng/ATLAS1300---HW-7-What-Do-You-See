@@ -1,9 +1,9 @@
 function drawLeafCluster(){
-    const numberOfLeaves = floor(random(3, 8));
+    const numberOfLeaves = floor(random(3, 7));
 
     for (let i = 0; i < numberOfLeaves; i++){
         push();
-        rotate(random(TWO_PI));
+        rotate(random(360));
         let leafSize = random(18, 35);
         drawLeaf(leafSize);
         pop();
@@ -19,20 +19,20 @@ function drawLeaf(size) {
   );
 
   fill(leafColor);
-  strokeWeight(4);
+  strokeWeight(2);
   stroke(129, 234, 108); 
 
   beginShape();
   vertex(0, 0);
   vertex(-size * 0.27, size * 0.18);
   vertex(-size * 0.32, size * 0.4);
-  vertex(0, size);
+  vertex(0, size + 8);
   vertex(size * 0.32, size * 0.4);
   vertex(size * 0.27, size * 0.18);
   endShape(CLOSE);
 
-  stroke(80, 130, 40);
-  strokeWeight(2);
-  line(0, 0, 0, size);
+  stroke(129, 234, 108);
+  strokeWeight(1);
+  line(0, 0, 0, size + 10);
 
 }
