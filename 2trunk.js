@@ -1,6 +1,6 @@
 function drawBranches(branchling){
     strokeWeight(branchling/10);
-    stroke(random(256), random(256), random(256));
+    stroke(random(134, 151), 73, 0);
     line(0, 0, 0, -branchling);
 
     if (branchling > 7){
