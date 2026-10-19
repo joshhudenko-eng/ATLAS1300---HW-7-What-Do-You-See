@@ -15,7 +15,7 @@ function drawLeaf(size) {
     const leafColor = color( //96, 167, 18 was green and 225, 214, 0 which was yellow and let the program do a more janky version of lerpColor 
     random(96, 225),  
     random(167, 214), 
-    random(18, 0)
+    random(18, 0),
   );
 
   fill(leafColor);
