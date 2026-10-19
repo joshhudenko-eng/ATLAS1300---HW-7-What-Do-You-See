@@ -1,6 +1,6 @@
 function drawTrunk(){
-    trunk = 400;
+    trunk = 600;
     strokeWeight(8);
     stroke("green");
-    line(0, 0, trunk, trunk);
+    line(0, 0, 0, trunk);
 }
