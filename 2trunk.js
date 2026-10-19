@@ -7,14 +7,13 @@ function drawBranches(branchling){
         push();
         translate(0, -branchling);
         rotate(radians(30));
-        drawBranches(branchling * 0.7)
+        drawBranches(branchling * 0.7);
         pop();
 
         push();
         translate(0, -branchling);
         rotate(radians(-30));
-        drawBranches(branchling * 0.5)
+        drawBranches(branchling * 0.5);
         pop();
     }
-
 }
