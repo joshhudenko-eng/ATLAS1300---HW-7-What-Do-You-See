@@ -1,16 +1,20 @@
 function drawBranches(branchling){
-    trunk = 250;
-    strokeWeight(8);
+    strokeWeight(branchling/10);
     stroke("brown");
-    line(0, 0, 0, -trunk);
+    line(0, 0, 0, -branchling);
 
-    push();
-    if (branchling > 3){
-        strokeWeight (map(30, 20, 10))
-        stroke("brown")
-        translate(0, -branchling)
-        rotate(30)
-        drawBranches(branchling * random(1, 2))
+    if (branchling > 7){
+        push();
+        translate(0, -branchling);
+        rotate(radians(30));
+        drawBranches(branchling * 0.7)
+        pop();
+
+        push();
+        translate(0, -branchling);
+        rotate(radians(-30));
+        drawBranches(branchling * 0.5)
+        pop();
     }
-    pop();
+
 }
