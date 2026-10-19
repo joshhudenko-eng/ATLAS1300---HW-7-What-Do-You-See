@@ -21,7 +21,6 @@ function drawTree(branchling){
         rotate(radians(random(-20, -40)));
         drawBranches(branchling * random(0.6, 0.75));
         pop();
-    } else { 
-
-    }
+    } 
+    
 }
