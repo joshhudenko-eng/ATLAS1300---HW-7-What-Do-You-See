@@ -1,9 +1,15 @@
-function drawBranches(branchling){
+function drawTree(branchling){
+
+    const leafGreen = 
+    const leafYellow =
+    const leafBrown =
+
+
     strokeWeight(branchling/11);
     stroke(random(90, 130), 73, 0);
     line(0, 0, 0, -branchling);
 
-    if (branchling > 60){
+    if (branchling > 40){
         push();
         translate(0, -branchling);
         rotate(radians(random(20, 40)));
