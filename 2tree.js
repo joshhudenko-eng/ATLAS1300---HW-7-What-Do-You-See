@@ -7,14 +7,14 @@ function drawTree(branchling){
     if (branchling > 40){
         push();
         translate(0, -branchling);
-        rotate(radians(random(20, 40) * PI/180));
-        drawBranches(branchling * random(0.6, 0.75));
+        rotate(radians(random(20, 40)));
+        drawTree(branchling * random(0.6, 0.75));
         pop();
 
         push();
         translate(0, -branchling);
         rotate(radians(random(-20, -40)));
-        drawBranches(branchling * random(0.6, 0.75));
+        drawTree(branchling * random(0.6, 0.75));
         pop();
     } 
 
