@@ -1,10 +1,10 @@
 function drawLeafCluster(){
-    const numberOfLeaves = floor(random(3, 7));
+    const numberOfLeaves = floor(random(3, 7)); //three to six leaves on each cluster
 
     for (let i = 0; i < numberOfLeaves; i++){
         push();
         rotate(random(360));
-        let leafSize = random(18, 35);
+        let leafSize = random(18, 35); //self explanatory by variable name lol
         drawLeaf(leafSize);
         pop();
     }
@@ -12,9 +12,9 @@ function drawLeafCluster(){
 
 function drawLeaf(size) {
 
-    const leafColor = color(
-    random(96, 225),
-    random(167, 214),
+    const leafColor = color( //96, 167, 18 was green and 225, 214, 0 which was yellow and let the program do a more janky version of lerpColor 
+    random(96, 225),  
+    random(167, 214), 
     random(18, 0)
   );
 
@@ -22,17 +22,17 @@ function drawLeaf(size) {
   strokeWeight(2);
   stroke(129, 234, 108); 
 
-  beginShape();
-  vertex(0, 0);
-  vertex(-size * 0.27, size * 0.18);
-  vertex(-size * 0.32, size * 0.4);
-  vertex(0, size + 8);
-  vertex(size * 0.32, size * 0.4);
-  vertex(size * 0.27, size * 0.18);
+  beginShape(); //chatGPT helped me make the decimal values from my leaf prototype elsewhere in p5js if Im keeping it a buck 50 
+  vertex(0, 0); //used to be vertex(shapeX, shapeY)
+  vertex(-size * 0.27, size * 0.18); //used to be vertex(shapeX - 30, shapeY + 20)
+  vertex(-size * 0.32, size * 0.4); //used to be vertex(shapeX - 35, shapeY + 45)
+  vertex(0, size + 8);  //used to be vertex(shapeX, shapeY + 110)
+  vertex(size * 0.32, size * 0.4); //used to be vertex(shapeX + 35, shapeY + 45)
+  vertex(size * 0.27, size * 0.18); //used to be vertex(shapeX + 30, shapeY + 20)
   endShape(CLOSE);
 
   stroke(129, 234, 108);
   strokeWeight(1);
-  line(0, 0, 0, size + 10);
+  line(0, 0, 0, size + 10); //makes the final line/rib accross the leaf & used to be line(shapeX, shapeY, shapeX, shapeY + 110)
 
 }
