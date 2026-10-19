@@ -6,6 +6,6 @@ function setup() {
 function draw() {
   background("black");
   translate(width/2, height)
-  drawBranches(200);
+  drawBranches(250);
   noLoop();
 }
