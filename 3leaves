@@ -4,7 +4,7 @@ function drawLeafCluster(){
     for (let i = 0; i < numberOfLeaves; i++){
         push();
         rotate(random(TWO_PI));
-        let leafSize = (18, 35)
+        let leafSize = random(18, 35);
         drawLeaf(leafSize);
         pop();
     }
