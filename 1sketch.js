@@ -4,7 +4,7 @@ function setup() {
 }
 
 function draw() {
-  background("black");
+  background(0, 0, 0);
   translate(width/2, height)
   drawTree(200);
   noLoop();
