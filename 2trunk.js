@@ -1,6 +1,18 @@
-function drawTrunk(){
-    trunk = 600;
-    strokeWeight(8);
-    stroke("green");
-    line(0, 0, 0, trunk);
+function drawBranches(branchling){
+    trunk = 250;
+
+    push();
+    if (branchling > 3){
+        strokeWeight(8);
+        stroke("brown");
+        line(0, 0, 0, -trunk);
+
+        
+        strokeWeight (map(30, 20, 10))
+        stroke("brown")
+        translate(0, -branchling)
+        rotate(30)
+        drawBranches(branchling * random(1, 2))
+    }
+    pop();
 }
