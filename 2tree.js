@@ -16,6 +16,8 @@ function drawTree(branchling){
         rotate(random(-40, -20));
         drawTree(branchling * random(0.6, 0.75));
         pop();
-    } 
+    } else {
+        drawLeafCluster();
+    }
 
 }

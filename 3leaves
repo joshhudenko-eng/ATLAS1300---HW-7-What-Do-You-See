@@ -1,0 +1,38 @@
+function drawLeafCluster(){
+    const numberOfLeaves = floor(random(3, 8));
+
+    for (let i = 0; i < numberOfLeaves; i++){
+        push();
+        rotate(random(TWO_PI));
+        let leafSize = (18, 35)
+        drawLeaf(leafSize);
+        pop();
+    }
+}
+
+function drawLeaf(size) {
+
+    const leafColor = color(
+    random(96, 225),
+    random(167, 214),
+    random(18, 0)
+  );
+
+  fill(leafColor);
+  strokeWeight(4);
+  stroke(129, 234, 108); 
+
+  beginShape();
+  vertex(0, 0);
+  vertex(-size * 0.27, size * 0.18);
+  vertex(-size * 0.32, size * 0.4);
+  vertex(0, size);
+  vertex(size * 0.32, size * 0.4);
+  vertex(size * 0.27, size * 0.18);
+  endShape(CLOSE);
+
+  stroke(80, 130, 40);
+  strokeWeight(2);
+  line(0, 0, 0, size);
+
+}
